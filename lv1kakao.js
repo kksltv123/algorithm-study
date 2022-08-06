@@ -12,7 +12,7 @@ function solution(id_list, report, k) {
     report.map((user) => {
         // 구조 분해 할당
         const [user_id, report_id] = user.split(' ') // user.split(' ') → 공백을 기준으로 나눈 배열
-        // console.log(user.split(' '))
+        console.log(user.split(' '))
         if(!report_list[report_id].includes(user_id)){
             report_list[report_id].push(user_id)
         }
@@ -39,7 +39,7 @@ let k = 2
 solution(id_list, report, k)
 // muzi: [apeach]
 // 정지 → frodo: [muzi, apeach] 
-// apeacj: []
+// apeach: []
 // 정지 → neo: [frodo, muzi] 
 // 신고한 유저가 정지를 당해야지 메일이 오기때문에 
 // 정지 당한 유저가 있는 배열만 보면 된다. 
